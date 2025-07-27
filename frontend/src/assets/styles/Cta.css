@@ -1,0 +1,53 @@
+.cta-section {
+    padding: 4rem 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/image-boy-&-girl-focused-on-work.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    height: 60vh;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 8rem;
+}  
+
+.cta-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}  
+
+.cta-button {
+    background-color: #d97706;
+    color: white;
+    padding: 1.1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    margin-right: 1.5em;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}  
+
+.cta-button2  {
+    background: #a8a29e;
+    color: white;
+    padding: 1.1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ea580c;
+}  
+
+.cta-button2:hover {
+    background-color: #f97316;
+}
