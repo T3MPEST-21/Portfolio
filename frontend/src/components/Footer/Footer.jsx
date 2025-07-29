@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <div className="footer-right">
           <div className="footer-links">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <a href="https://github.com/T3MPEST-21" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
               <FaGithub className="footer-social-icon" />
             </a>
             <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
