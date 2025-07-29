@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 const sectionIds = [
   { id: 'home', label: 'Home', icon: <FiHome className='nav-icons' /> },
   { id: 'about', label: 'About', icon: <FiUser className='nav-icons' /> },
-  { id: 'projects', label: 'Projects', icon: <span>&lt;/&gt;</span> },
+  /*{ id: 'projects', label: 'Projects', icon: <span>&lt;/&gt;</span> },
   { id: 'exprerience', label: 'Experience', icon: <FiAward className='nav-icons' /> },
-  { id: 'skills', label: 'Skills', icon: <FiLayers className='nav-icons' /> },
+  { id: 'skills', label: 'Skills', icon: <FiLayers className='nav-icons' /> },*/
   { id: 'testimonials', label: 'Testimonials', icon: <FiMessageSquare className='nav-icons' /> },
   { id: 'contact', label: 'Contact', icon: <FiMail className='nav-icons' /> },
 ];
