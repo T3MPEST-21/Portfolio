@@ -33,7 +33,7 @@ const AboutMe = () => {
     >
       <motion.h1 style={{ marginBottom: '1rem', textAlign: 'center' }}>About Me</motion.h1>
       <motion.p>Discover my journey, passions, and story behind my work</motion.p>
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex'}} className='abt-container'>
         <motion.section className='abt-img'
         initial={{opacity: 0, x: -80}}
         whileInView={{opacity: 1, x: 0}}
@@ -75,7 +75,7 @@ const AboutMe = () => {
           transition={{duration: 1.5, delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
               >
-                <span>< FaIdBadge  className='about-icon'/> <span style={{fontSize: '14px', fontWeight: 'bold', margin: '0 5px'}}>Name: </span> Ozuu Chidiebere Divine </span>
+                <span>< FaIdBadge  className='about-icon'/> <span className='info-tittle'>Name: </span> Ozuu Chidiebere Divine </span>
               </motion.section>
               <motion.section className='info'
               initial={{opacity: 0, x: 80}}
@@ -83,7 +83,7 @@ const AboutMe = () => {
           transition={{duration: 1.5, delay: 0.4 }}
           viewport={{ once: true, amount: 0.5 }}
               >
-                <span>< FiCalendar className='about-icon'/> <span style={{fontSize: '14px', fontWeight: 'bold', margin: '0 5px'}}>Date of birth: </span> 24 Jan 2004 </span>
+                <span>< FiCalendar className='about-icon'/> <span className='info-tittle'>Date of birth: </span> 24 Jan 2004 </span>
               </motion.section>
               <motion.section className='info'
               initial={{opacity: 0, x: 80}}
@@ -91,18 +91,18 @@ const AboutMe = () => {
           transition={{duration: 1.5, delay: 0.6 }}
           viewport={{ once: true, amount: 0.5 }}
               >
-              <span>< FaMapMarkerAlt className='about-icon'/> <span style={{fontSize: '14px', fontWeight: 'bold', margin: '0 5px'}}>Place of birth: </span> Abia State, Nigeria </span>
+              <span>< FaMapMarkerAlt className='about-icon'/> <span className='info-tittle'>Place of birth: </span> Abia State, Nigeria </span>
               </motion.section>
             </div>
             
-            <div>
+            <div className='sec'>
               <motion.section className='info'
               initial={{opacity: 0, x: 80}}
           whileInView={{opacity: 1, x: 0}}
           transition={{duration: 1.5, delay: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
               >
-              <span>< FiMail className='about-icon'/> <span style={{fontSize: '14px', fontWeight: 'bold', margin: '0 5px'}}>Email: </span> Chidiebereozuu@gmail.com </span>
+              <span className='email'>< FiMail className='about-icon'/> <span className='info-tittle'>Email: </span> Chidiebereozuu@gmail.com </span>
               </motion.section>
               <motion.section className='info'
               initial={{opacity: 0, x: 80}}
@@ -110,7 +110,7 @@ const AboutMe = () => {
           transition={{duration: 1.5, delay: 1 }}
           viewport={{ once: true, amount: 0.5 }}
               >
-              <span>< FaPhone className='about-icon'/> <span style={{fontSize: '14px', fontWeight: 'bold', margin: '0 5px'}}>Phone: </span> +234 701 723 7002</span>
+              <span>< FaPhone className='about-icon'/> <span className='info-tittle'>Phone: </span> +234 701 723 7002</span>
               </motion.section>
               <motion.section className='info'
               initial={{opacity: 0, x: 80}}
@@ -118,7 +118,7 @@ const AboutMe = () => {
           transition={{duration: 1.5, delay: 1.2 }}
           viewport={{ once: true, amount: 0.5 }}
               >
-              <span>< FaGraduationCap className='about-icon' style={{fontSize: '27px', padding: '0 4px'}}/> <span style={{fontSize: '14px', fontWeight: 'bold', margin: '0 5px'}}>Education: </span> Michael Okpara University of Agriculture, Umudike </span>
+              <span>< FaGraduationCap className='about-icon' style={{fontSize: '27px', padding: '0 4px'}}/> <span className='info-tittle'>Education: </span> Michael Okpara University of Agriculture, Umudike </span>
               </motion.section>
             </div>
           </motion.div>

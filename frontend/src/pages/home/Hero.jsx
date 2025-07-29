@@ -105,7 +105,7 @@ const Hero = () => {
           < DiCss3 className='language-icon css' />
           < FaReact className='language-icon react' />
           < FaJs className='language-icon js' />
-          <img src="/images/me.jpg" alt="img"/>
+          <img src="/images/me.png" alt="img"/>
         </motion.div>
       
     </motion.section>

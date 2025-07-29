@@ -77,11 +77,19 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials-section" id='testimonials'>
-      <motion.section className='testimonials-intro'>
+      <motion.section className='testimonials-intro' 
+      initial={{opacity: 0, y: 80}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 1.5 }}
+          viewport={{ once: true, amount: 0.5 }}>
         <h1> What people say </h1>
       <p>Kind words from great people — grateful for every collaboration.</p>
       </motion.section>
-      <motion.section className='testimonial-top'>
+      <motion.section className='testimonial-top'
+      initial={{opacity: 0, x: -80}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 1.5, delay: 0.4 }}
+          viewport={{ once: true, amount: 0.5 }}>
         <span><FiMessageSquare />Testimonials</span>
         {!showForm && (
         <button
@@ -137,14 +145,18 @@ const Testimonials = () => {
       >
         {[...userTestimonials, ...defaultTestimonials].length === 0 && <p>No testimonials yet. Be the first to add one!</p>}
         {[...userTestimonials, ...defaultTestimonials].map((t, idx) => (
-          <div
+          <motion.div
             key={idx}
             className="testimonial-card"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: idx * 0.2 }}
           >
             <div className="testimonial-name">{t.name}</div>
             <div className="testimonial-message">{t.message}</div>
             <div className="testimonial-date">{t.date}</div>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>

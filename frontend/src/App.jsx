@@ -4,7 +4,6 @@ import './global.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Nav from './components/Header/Nav';
 import AppRouter from './router/AppRouter';
-import Login from './pages/Auth/Login';
 import Footer from './components/Footer/Footer';
 /*import HomePage from './pages/home/HomePage';*/
 
