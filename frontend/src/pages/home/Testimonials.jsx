@@ -7,17 +7,17 @@ const LOCAL_STORAGE_KEY = 'testimonials';
 
 const defaultTestimonials = [
   {
-    name: 'Jane Doe',
+    name: 'Elu Ifeanyi',
     message: 'Working with you was a fantastic experience! Highly recommended.',
     date: '2025-05-01 10:00 AM',
   },
   {
-    name: 'John Smith',
+    name: 'Smart Willie',
     message: 'Professional, creative, and always on time. Will hire again!',
     date: '2025-06-02 2:30 PM',
   },
   {
-    name: 'Emily Johnson',
+    name: 'Emilia Idoro',
     message: 'Exceeded my expectations in every way. Thank you!',
     date: '2025-06-03 5:45 PM',
   },
