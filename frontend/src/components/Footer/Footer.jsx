@@ -16,13 +16,10 @@ const Footer = () => {
             <a href="https://github.com/T3MPEST-21" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
               <FaGithub className="footer-social-icon" />
             </a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-              <FaInstagram className="footer-social-icon" />
-            </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/chidiebere-ozuu-927644341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
               <FaLinkedin className="footer-social-icon" />
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
+            <a href="https://twitter.com/messages/compose?recipient_id=1712396737901879378" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
               <FaTwitter className="footer-social-icon" />
             </a>
           </div>

@@ -53,19 +53,15 @@ const Contact = () => {
             <motion.section className="contact-socials" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
               <h3>Connect with me</h3>
               <div className="social-links">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="Visit my GitHub profile">
+                <a href="https://github.com/T3MPEST-21" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="Visit my GitHub profile">
                   <FaGithub className="social-icon" />
                   <span className="social-text">GitHub</span>
                 </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Visit my Instagram profile">
-                  <FaInstagram className="social-icon" />
-                  <span className="social-text">Instagram</span>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Visit my LinkedIn profile">
+                <a href="https://www.linkedin.com/in/chidiebere-ozuu-927644341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Visit my LinkedIn profile">
                   <FaLinkedin className="social-icon" />
                   <span className="social-text">LinkedIn</span>
                 </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Visit my Twitter profile">
+                <a href="https://twitter.com/messages/compose?recipient_id=1712396737901879378" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Visit my Twitter profile">
                   <FaTwitter className="social-icon" />
                   <span className="social-text">Twitter</span>
                 </a>
