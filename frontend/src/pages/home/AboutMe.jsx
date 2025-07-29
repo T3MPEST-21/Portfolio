@@ -102,7 +102,7 @@ const AboutMe = () => {
           transition={{duration: 1.5, delay: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
               >
-              <span className='email'>< FiMail className='about-icon'/> <span className='info-tittle'>Email: </span> Chidiebereozuu@gmail.com </span>
+              <span className='email'>< FiMail className='about-icon'/> <span className='info-tittle'>Email: </span> <span>Chidiebereozuu@gmail.com</span> </span>
               </motion.section>
               <motion.section className='info'
               initial={{opacity: 0, x: 80}}

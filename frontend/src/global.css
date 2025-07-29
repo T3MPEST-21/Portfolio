@@ -1611,8 +1611,9 @@ body.dark-mode .hamburger span {
   margin-right: -19px;
 }
 
-.email {
-  font-size: 11.5px !important;
+.email :last-child {
+  font-size: 9px !important;
+  margin: 2.5px 0 0 -2px;
 }
 
 .info span {
