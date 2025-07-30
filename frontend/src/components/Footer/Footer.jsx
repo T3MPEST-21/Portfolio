@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <div className="footer-logo">Ozuu chidiebere Divine</div>
+          <div className="footer-logo">Ozuu Chidiebere Divine</div>
           <div className="footer-description">
             &copy; {new Date().getFullYear()} Chidiebere Divine. All rights reserved.
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaWhatsapp, FaLinkedin, FaTwitter } from 'react-icons/fa';
 // QRCode import removed; using external QR code image instead
 
 const SUPPORT_EMAIL = 'mailto:your@email.com'; // Replace with your email
@@ -64,6 +64,10 @@ const Contact = () => {
                 <a href="https://twitter.com/messages/compose?recipient_id=1712396737901879378" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Visit my Twitter profile">
                   <FaTwitter className="social-icon" />
                   <span className="social-text">Twitter</span>
+                </a>
+                <a href="https://wa.me/2347072070736?text=Hello%20Chidiebere%2C%20I%20just%20visited%20your%20portfolio%20and%20would%20love%20to%20connect" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="Visit my WhatsApp">
+                  <FaWhatsapp className="social-icon" />
+                  <span className="social-text">WhatsApp</span>
                 </a>
               </div>
             </motion.section>
