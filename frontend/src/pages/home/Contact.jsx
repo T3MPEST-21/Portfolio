@@ -114,7 +114,7 @@ const Contact = () => {
               height={200}
               style={{ borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
             />
-            <p style={{ marginTop: '1em', fontSize: '1.1em' }}>your@email.com</p>
+            <p style={{ marginTop: '1em', fontSize: '1.1em' }}>chidiebereozuu@gmail.com</p>
           </motion.section>
         )}
       </div>
