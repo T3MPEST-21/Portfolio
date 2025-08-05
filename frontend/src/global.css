@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root {
     --rich-charcoal-black: #1a1a1a;
     --warm-gray: #a8a29e;
@@ -189,7 +192,7 @@ body.dark-mode .nav-links a.active {
   padding: 0;
   margin: 0;
   font-size: 2.7em;
-  font-family: sans-serif;
+  font-family: 'Roboto';
 }
 
 .hero-span {
@@ -197,7 +200,7 @@ body.dark-mode .nav-links a.active {
   padding: 0;
   font-size: 1.5em;
   font-weight: 600;
-  font-family: sans-serif;
+  font-family: 'outfit';
   overflow: hidden;
   white-space: nowrap;
   animation: typing 7s steps(50, end) 0s infinite alternate;
@@ -264,6 +267,7 @@ body.dark-mode .cursor {
 .hero-description {
   width: 75%;
   padding-top: 1em;
+  font-family: 'outfit';
 }
 
 .socials {
@@ -456,6 +460,7 @@ body.dark-mode .language-icon {
 .abt-text {
   width: 45%;
   padding-top: 2em;
+  font-family: 'outfit';
 }
 
 .who-i-am {
@@ -515,7 +520,7 @@ body.dark-mode .about-icon {
 .info-tittle {
   font-size: 14px;
   font-weight: bold;
-  margin: 0 5px;
+  margin: 3px 5px 0px 5px;
 }
 
 .abt-btn {
