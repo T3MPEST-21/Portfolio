@@ -188,14 +188,15 @@ body.dark-mode .nav-links a.active {
 .hero-h1 {
   padding: 0;
   margin: 0;
-  font-size: 3em;
+  font-size: 2.7em;
   font-family: sans-serif;
 }
 
-.hero-h3 {
+.hero-span {
   margin: 0;
   padding: 0;
   font-size: 1.5em;
+  font-weight: 600;
   font-family: sans-serif;
   overflow: hidden;
   white-space: nowrap;
@@ -374,8 +375,7 @@ body.dark-mode .stats {
 
 .img-container img {
   margin-left: 1.4em;
-  height: 70vh;
-  width: 35vw;
+  width: 34vw;
   object-fit: fill;
   background: transparent;
   border-radius: 50%;
@@ -409,16 +409,16 @@ body.dark-mode .language-icon {
 
 .css {
   top: 1.4em;
-  right: 4rem;
+  right: 5rem;
 }
 
 .js {
-  top: 9em;
-  right: 15em;
+  top: 10em;
+  right: 14.2em;
 }
 
 .react {
-  top: 13em;
+  top: 12em;
   right: 3em;
 }
 
@@ -1242,7 +1242,7 @@ body.dark-mode .footer-social-icon {
 
 /*tablet size*/
 
-@media (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 1025px) {
 .toggle-btn {
   left: 7px;
   top: 15px;
@@ -1290,9 +1290,9 @@ body.dark-mode .footer-social-icon {
   font-size: 2.3em;
 }
 
-.hero-h3 {
+.hero-span {
   margin: 5px 0 0 0;
-  font-size: 1.26em;
+  font-size: 100%;
 }
 
 @keyframes typing {
@@ -1301,10 +1301,10 @@ body.dark-mode .footer-social-icon {
   }
 
   40% {
-    width: 95%;
+    width: 75%;
   }
   100% {
-    width: 95%;
+    width: 75%;
   }
 }
 
@@ -1334,11 +1334,11 @@ body.dark-mode .footer-social-icon {
 
 .img-container {
   margin-top: 0;
+  position: relative;
 }
 
 .img-container img {
   margin-left: 1.4em;
-  height: 40%;
 }
 
 
@@ -1347,23 +1347,23 @@ body.dark-mode .footer-social-icon {
 }
 
 .html {
-  top: 30%;
-  right: 39%;
+  top: 0%;
+  left: 2%;
 }
 
 .css {
-  top: 23%;
-  right: 4%;
+  top: 0%;
+  right: -3%;
 }
 
 .js {
-  top: 61%;
-  right: 40%;
+  top: 80%;
+  left: 0%;
 }
 
 .react {
-  top: 13em;
-  right: .4em;
+  top: 87%;
+  right: 0%;
 }
 
 /*tablet About me section*/
@@ -1380,9 +1380,8 @@ body.dark-mode .footer-social-icon {
 }
 
 .abt-img img {
-  width: 86%;
-  height: 100%;
-  margin-top: 30%;
+  width: 38vw;
+  margin-top: 10%;
   border-radius: 2em;
 }
 

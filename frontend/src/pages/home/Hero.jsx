@@ -32,9 +32,9 @@ const Hero = () => {
             whileInView={{opacity: 1, x:0}}
             transition={{duration:.6, delay: .9}}
             >
-              <motion.h3 className="hero-h3">
+              <motion.span className="hero-span">
               Frontend Developer & UI/UX Designer 
-            </motion.h3>
+            </motion.span>
             <span className='cursor'></span>
             </motion.div>
 
