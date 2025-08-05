@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {motion} from 'framer-motion';
 import { FiTwitter, FiBriefcase, FiBarChart, FiGithub, FiInstagram, FiLinkedin, FiDownload, FiMail} from 'react-icons/fi';
-import { FaJs, FaHtml5, FaReact} from 'react-icons/fa';
+import { FaJs, FaWhatsapp, FaReact} from 'react-icons/fa';
 import { DiCss3, DiHtml5} from 'react-icons/di';
 
 
@@ -59,16 +59,16 @@ const Hero = () => {
               <motion.section className="social-icons"
               
               >
-                <motion.a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                <motion.a href="https://twitter.com/messages/compose?recipient_id=1712396737901879378" target="_blank" rel="noopener noreferrer">
                   <FiTwitter />
                 </motion.a>
-                <motion.a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                <motion.a href="https://github.com/T3MPEST-21" target="_blank" rel="noopener noreferrer">
                   <FiGithub />
                 </motion.a>
-                <motion.a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                  <FiInstagram />
+                <motion.a href="https://wa.me/2347072070736?text=Hello%20Chidiebere%2C%20I%20just%20visited%20your%20portfolio%20and%20would%20love%20to%20connect" target="_blank" rel="noopener noreferrer">
+                  <FaWhatsapp />
                 </motion.a>
-                <motion.a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                <motion.a href="https://www.linkedin.com/in/chidiebere-ozuu-927644341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
                   <FiLinkedin />
                 </motion.a>
               </motion.section>
