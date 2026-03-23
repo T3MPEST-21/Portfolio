@@ -1,0 +1,283 @@
+/* AboutMe.css */
+.about-section {
+    margin-top: 8em;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.abt-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.abt-img {
+    flex: 1;
+    max-width: 500px;
+}
+
+.abt-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.abt-text {
+    width: 45%;
+    padding-top: 2em;
+    font-family: 'outfit';
+}
+
+.who-i-am {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 40px;
+}
+
+.who-i-am span {
+    padding: 0;
+    margin: 0;
+    width: 45%;
+}
+
+.who-i-am span:nth-child(2) {
+    margin-top: -7px;
+}
+
+.who-i-am p {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.about-icon {
+    color: var(--burnt-dark-blue2);
+    font-size: 1.5rem;
+}
+
+body.dark-mode .about-icon {
+    color: var(--warm-gray);
+}
+
+.personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.personal-info :nth-child(1) {
+    border-radius: 1em 0 0 0;
+}
+
+.personal-info :nth-child(2) {
+    border-radius: 0 1em 0 0;
+}
+
+.personal-info :nth-child(6) {
+    border-radius: 0 0 1em 0;
+}
+
+.personal-info :nth-child(5) {
+    border-radius: 0 0 0 1em;
+}
+
+.info span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.info-tittle {
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+.abt-btn {
+    margin-top: 1rem;
+    justify-self: center;
+    background: var(--burnt-dark-blue1);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: var(--liquid-edge);
+    cursor: pointer;
+    font-weight: 700;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--liquid-shadow);
+}
+
+.abt-btn:hover {
+    transform: translateY(-5px);
+    background: var(--burnt-dark-blue2);
+    box-shadow: var(--liquid-shadow), 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .abt-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .abt-text {
+        text-align: center;
+    }
+    .personal-info {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .who-i-am, .personal-info {
+        grid-template-columns: 1fr;
+    }
+    .abt-text {
+        align-items: center;
+    }
+}
+
+
+/* Tablet overrides */
+@media (min-width: 600px) and (max-width: 1025px) {
+    .about-section {
+        margin-top: 4em;
+        padding-top: 1em;
+        text-align: center;
+    }
+
+    .abt-img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .abt-img img {
+        width: 38vw;
+        margin-top: 10%;
+        border-radius: 2em;
+    }
+
+    .who-i-am span:nth-child(2) {
+        margin-top: -25px;
+    }
+
+    .personal-info div {
+        gap: 20px;
+    }
+
+    .info span {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 12px;
+    }
+
+    .info-tittle {
+        font-size: 12px !important;
+        font-weight: bold;
+        margin: 0 5px;
+    }
+
+    .abt-btn {
+        padding: 0.7em 1.3em;
+    }
+
+    .download-popover {
+        width: 40%;
+        height: 40vh;
+    }
+}
+
+/* Smartphone overrides */
+@media (max-width: 768px) {
+    .about-section {
+        margin-top: 2em;
+        padding: 2rem 1rem;
+    }
+
+    .abt-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .abt-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .who-i-am {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .who-i-am span {
+        width: 100%;
+    }
+
+    .personal-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 0.5rem;
+        background: transparent;
+        border: none;
+    }
+
+    .personal-info :nth-child(1) {
+        border-radius: 5em;
+    }
+
+    .personal-info :nth-child(2) {
+        border-radius: 5em;
+    }
+
+    .personal-info :nth-child(6) {
+        border-radius: 5em;
+    }
+
+    .personal-info :nth-child(5) {
+        border-radius: 5em;
+    }
+
+
+    .info {
+        background: var(--liquid-bg);
+        border: var(--liquid-edge);
+        backdrop-filter: var(--liquid-blur);
+        padding: 0.6rem 1.2rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        box-shadow: var(--liquid-glow);
+        width: 100%;
+    }
+
+    .info span {
+        gap: 0.5rem;
+    }
+
+    .info-tittle {
+        font-size: 0.8rem;
+    }
+
+
+    .abt-img {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+}

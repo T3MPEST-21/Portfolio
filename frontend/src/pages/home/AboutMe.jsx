@@ -4,32 +4,30 @@ import Swal from 'sweetalert2'
 import { FiMail, FiInfo, FiCalendar, FiDownload } from 'react-icons/fi';
 import { MdLightbulbOutline } from 'react-icons/md';
 import { FaPhone, FaMapMarkerAlt, FaIdBadge, FaGraduationCap } from 'react-icons/fa';
+import './AboutMe.css';
 
+
+
+import { PERSONAL_INFO } from '../../constants';
 
 const AboutMe = () => {
 
-  const download = () => {
-    Swal.fire({
-      title: 'Sorry!',
-      html: 'My Resume is not available at the moment, Please try again later.',
-      icon: 'info',
-      confirmButtonText: 'Understood', 
-      customClass: {
-    popup: 'download-popover',
-    title: 'popover-title',
-    htmlContainer: 'popover-text',
-    confirmButton: 'popover-confirm',
-    icon: 'popover-icon'
-  }
-    });
-  }
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Ozuu Chidiebere Divine - Resume.pdf';
+    link.download = 'Ozuu_Chidiebere_Divine_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <motion.div className="about-section" id='about'
     initial={{opacity: 0, y: 80}}
     whileInView={{opacity: 1, y: 0}}
     transition={{duration: 1.5}}
-    viewport={{ once: true, amount: 0.5 }}
+    viewport={{ once: true, amount: 0.1 }}
+
     >
       <motion.h1 style={{ marginBottom: '1rem', textAlign: 'center' }}>About Me</motion.h1>
       <motion.p>Discover my journey, passions, and story behind my work</motion.p>
@@ -38,7 +36,8 @@ const AboutMe = () => {
         initial={{opacity: 0, x: -80}}
         whileInView={{opacity: 1, x: 0}}
         transition={{duration: 1.5}}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
+
         >
           <img src="/images/me.png" alt="img" />
         </motion.section>
@@ -64,66 +63,70 @@ const AboutMe = () => {
             <motion.h2
             initial={{opacity: 0, x: 80}}
             whileInView={{opacity: 1, x: 0}}
-            transition={{duration: 1.5, delay: 0.2 }}
-            viewport={{once: true, amount: 0.5}}
-            >Personal Info</motion.h2>
+            viewport={{ once: true, amount: 0.1 }}
+            >
+              Personal Info
+            </motion.h2>
+
           <motion.div className='personal-info'>
-            <div>
-              <motion.section className='info'
+
+            <motion.section className='info liquid-glass'
               initial={{opacity: 0, x: 80}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 1.5, delay: 0.2 }}
-          viewport={{ once: true, amount: 0.5 }}
-              >
-                <span>< FaIdBadge  className='about-icon'/> <span className='info-tittle'>Name: </span> Ozuu Chidiebere Divine </span>
-              </motion.section>
-              <motion.section className='info'
-              initial={{opacity: 0, x: 80}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 1.5, delay: 0.4 }}
-          viewport={{ once: true, amount: 0.5 }}
-              >
-                <span>< FiCalendar className='about-icon'/> <span className='info-tittle'>Date of birth: </span> 24 Jan 2004 </span>
-              </motion.section>
-              <motion.section className='info'
-              initial={{opacity: 0, x: 80}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 1.5, delay: 0.6 }}
-          viewport={{ once: true, amount: 0.5 }}
-              >
-              <span>< FaMapMarkerAlt className='about-icon'/> <span className='info-tittle'>Place of birth: </span> Abia State, Nigeria </span>
-              </motion.section>
-            </div>
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <span>< FaIdBadge  className='about-icon'/> <span className='info-tittle'>Name: </span> {PERSONAL_INFO.name} </span>
+            </motion.section>
             
-            <div className='sec'>
-              <motion.section className='info'
+            <motion.section className='info liquid-glass'
               initial={{opacity: 0, x: 80}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 1.5, delay: 0.8 }}
-          viewport={{ once: true, amount: 0.5 }}
-              >
-              <span className='email'>< FiMail className='about-icon'/> <span className='info-tittle'>Email: </span> <span>Chidiebereozuu@gmail.com</span> </span>
-              </motion.section>
-              <motion.section className='info'
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <span>< FiCalendar className='about-icon'/> <span className='info-tittle'>DOB: </span> {PERSONAL_INFO.dob} </span>
+            </motion.section>
+            
+            <motion.section className='info liquid-glass'
               initial={{opacity: 0, x: 80}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 1.5, delay: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-              >
-              <span>< FaPhone className='about-icon'/> <span className='info-tittle'>Phone: </span> +234 701 723 7002</span>
-              </motion.section>
-              <motion.section className='info'
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <span>< FaMapMarkerAlt className='about-icon'/> <span className='info-tittle'>Location: </span> {PERSONAL_INFO.pob} </span>
+            </motion.section>
+
+            <motion.section className='info liquid-glass'
               initial={{opacity: 0, x: 80}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 1.5, delay: 1.2 }}
-          viewport={{ once: true, amount: 0.5 }}
-              >
-              <span>< FaGraduationCap className='about-icon' style={{fontSize: '27px', padding: '0 4px'}}/> <span className='info-tittle'>Education: </span> Michael Okpara University of Agriculture, Umudike </span>
-              </motion.section>
-            </div>
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <span className='email'>< FiMail className='about-icon'/> <span className='info-tittle'>Email: </span> {PERSONAL_INFO.email} </span>
+            </motion.section>
+
+            <motion.section className='info liquid-glass'
+              initial={{opacity: 0, x: 80}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <span>< FaPhone className='about-icon'/> <span className='info-tittle'>Phone: </span> {PERSONAL_INFO.phone} </span>
+            </motion.section>
+
+            <motion.section className='info liquid-glass'
+              initial={{opacity: 0, x: 80}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <span>< FaGraduationCap className='about-icon'/> <span className='info-tittle'>Edu: </span> {PERSONAL_INFO.education.split(',')[0]} </span>
+            </motion.section>
           </motion.div>
+
           <motion.div className='abt-btns'>
-            <button className='abt-btn'onClick={download}> <FiDownload  style={{margin: '3px 10px 0 0'}}/>Download My Resume</button>
+            <button className='abt-btn'onClick={handleDownloadResume}> <FiDownload  style={{margin: '3px 10px 0 0'}}/>Download My Resume</button>
           </motion.div>
         </motion.section>
       </div>

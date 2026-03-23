@@ -1,21 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import '../../global.css';
+import './Nav.css';
 import { FiMessageSquare, FiMail, FiHome, FiAward, FiLayers, FiUser } from 'react-icons/fi';
+import { HiHomeModern } from "react-icons/hi2";
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 const sectionIds = [
   { id: 'home', label: 'Home', icon: <FiHome className='nav-icons' /> },
   { id: 'about', label: 'About', icon: <FiUser className='nav-icons' /> },
-  /*{ id: 'projects', label: 'Projects', icon: <span>&lt;/&gt;</span> },
-  { id: 'exprerience', label: 'Experience', icon: <FiAward className='nav-icons' /> },
-  { id: 'skills', label: 'Skills', icon: <FiLayers className='nav-icons' /> },*/
+  { id: 'skills', label: 'Skills', icon: <FiLayers className='nav-icons' /> },
+  { id: 'projects', label: 'Projects', icon: <FiAward className='nav-icons' /> },
   { id: 'testimonials', label: 'Testimonials', icon: <FiMessageSquare className='nav-icons' /> },
   { id: 'contact', label: 'Contact', icon: <FiMail className='nav-icons' /> },
 ];
 
-const Nav = () => {
+
+
+import { PERSONAL_INFO } from '../../constants';
+
+const Nav = ({ toggleTheme, IsDarkMode }) => {
   const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  const getNickname = (name) => {
+    return name.split(' ')[0].toUpperCase();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,34 +67,52 @@ const Nav = () => {
   }, []);
 
   return (
-    <motion.nav className="nav">
-      <motion.div className='logo'>
-        <a href="/"> &lt;/&gt; T3MPEST</a>
-      </motion.div>
-      <div
-        className={`hamburger${menuOpen ? ' open' : ''}`}
-        onClick={() => setMenuOpen(m => !m)}
-        aria-label="Toggle navigation menu"
-        tabIndex={0}
-        role="button"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <motion.section className={`nav-links${menuOpen ? ' open' : ''}`}>
-        {sectionIds.map(section => (
-          <a
-            key={section.id}
-            href={`#${section.id}`}
-            className={`nav-link${activeSection === section.id ? ' active' : ''}`}
-            onClick={e => handleClick(e, section.id)}
+    <>
+      <div 
+        className={`nav-overlay${menuOpen ? ' visible' : ''}`} 
+        onClick={() => setMenuOpen(false)}
+      ></div>
+      <motion.nav className="nav">
+        <motion.div className='logo'>
+          <a href="/"> &lt;/&gt; {PERSONAL_INFO.nickname}</a>
+        </motion.div>
+        <div className="nav-actions">
+          <button
+            title='Toggle Theme, alt+t'
+            onClick={toggleTheme}
+            className='theme-toggle-nav'
+            aria-label="Toggle theme"
           >
-            {section.icon} {section.label}
-          </a>
-        ))}
-      </motion.section>
-    </motion.nav>
+            {IsDarkMode ? '☀️' : '🌙'}
+          </button>
+          <div
+            className={`hamburger${menuOpen ? ' open' : ''}`}
+            onClick={() => setMenuOpen(m => !m)}
+            aria-label="Toggle navigation menu"
+            tabIndex={0}
+            role="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <motion.section className={`nav-links${menuOpen ? ' open' : ''}`}>
+          {sectionIds.map((section, idx) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              className={`nav-link${activeSection === section.id ? ' active' : ''}`}
+              onClick={e => handleClick(e, section.id)}
+              style={{ '--idx': idx }} // For potential framer-motion stagger or CSS delays
+            >
+              {section.icon} {section.label}
+            </a>
+          ))}
+        </motion.section>
+      </motion.nav>
+    </>
   );
 };
 

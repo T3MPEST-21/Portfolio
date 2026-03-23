@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Swal from 'sweetalert2'
-import { FiMessageSquare} from 'react-icons/fi';
+import { FiMessageSquare } from 'react-icons/fi';
+import { FaPlus, FaTimes, FaUser, FaQuoteLeft } from 'react-icons/fa';
+
+import './Testimonials.css';
+
 
 const LOCAL_STORAGE_KEY = 'testimonials';
 
@@ -81,7 +85,8 @@ const Testimonials = () => {
       initial={{opacity: 0, y: 80}}
           whileInView={{opacity: 1, y: 0}}
           transition={{duration: 1.5 }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.1 }}>
+
         <h1> What people say </h1>
       <p>Kind words from great people — grateful for every collaboration.</p>
       </motion.section>
@@ -89,7 +94,8 @@ const Testimonials = () => {
       initial={{opacity: 0, x: -80}}
           whileInView={{opacity: 1, x: 0}}
           transition={{duration: 1.5, delay: 0.4 }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.1 }}>
+
         <span><FiMessageSquare />Testimonials</span>
         {!showForm && (
         <button
@@ -150,7 +156,8 @@ const Testimonials = () => {
             className="testimonial-card"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
+
             transition={{ duration: 0.7, delay: idx * 0.2 }}
           >
             <div className="testimonial-name">{t.name}</div>

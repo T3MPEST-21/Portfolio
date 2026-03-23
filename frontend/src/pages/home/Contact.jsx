@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaWhatsapp, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import './Contact.css';
+
 // QRCode import removed; using external QR code image instead
 
-const SUPPORT_EMAIL = 'mailto:your@email.com'; // Replace with your email
+import { PERSONAL_INFO, SUPPORT_EMAIL } from '../../constants';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -50,28 +52,28 @@ const Contact = () => {
       <div className="contact-main">
         {mode === 'contact' ? (
           <>
-            <motion.section className="contact-socials" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
+            <motion.section className="contact-socials liquid-glass" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
               <h3>Connect with me</h3>
               <div className="social-links">
-                <a href="https://github.com/T3MPEST-21" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="Visit my GitHub profile">
+                <a href={PERSONAL_INFO.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="Visit my GitHub profile">
                   <FaGithub className="social-icon" />
                   <span className="social-text">GitHub</span>
                 </a>
-                <a href="https://www.linkedin.com/in/chidiebere-ozuu-927644341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Visit my LinkedIn profile">
+                <a href={PERSONAL_INFO.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Visit my LinkedIn profile">
                   <FaLinkedin className="social-icon" />
                   <span className="social-text">LinkedIn</span>
                 </a>
-                <a href="https://twitter.com/messages/compose?recipient_id=1712396737901879378" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Visit my Twitter profile">
+                <a href={PERSONAL_INFO.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Visit my Twitter profile">
                   <FaTwitter className="social-icon" />
                   <span className="social-text">Twitter</span>
                 </a>
-                <a href="https://wa.me/2347072070736?text=Hello%20Chidiebere%2C%20I%20just%20visited%20your%20portfolio%20and%20would%20love%20to%20connect" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="Visit my WhatsApp">
+                <a href={PERSONAL_INFO.socials.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="Visit my WhatsApp">
                   <FaWhatsapp className="social-icon" />
                   <span className="social-text">WhatsApp</span>
                 </a>
               </div>
             </motion.section>
-            <motion.section className="contact-form-section" initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
+            <motion.section className="contact-form-section liquid-glass" initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
               <h3>Send a Message</h3>
               <form className="contact-form" onSubmit={handleSubmit}>
                 <input
