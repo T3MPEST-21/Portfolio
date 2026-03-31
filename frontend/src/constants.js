@@ -70,8 +70,8 @@ export const PROJECTS = [
     {
         title: "Sonique",
         description: "A premium music player with mood-tagging features and vertical gesture controls. Built with Flutter for a seamless audio experience.",
-        type: "Mobile App (Flutter)",
-        tags: ["Flutter", "Dart", "Audio Service", "Mood Tagging", "UX"],
+        type: "Mobile App (React Native)",
+        tags: ["React Native", "TypeScript", "Audio Service", "Mood Tagging", "UX"],
         github: "#",
         demo: "#",
         image: "/images/soniqueLogo.png"
@@ -79,8 +79,8 @@ export const PROJECTS = [
     {
         title: "Battery Guardian",
         description: "An Android utility for optimizing battery life, featuring real-time monitoring and smart permission handling.",
-        type: "Mobile App (Flutter)",
-        tags: ["Flutter", "Kotlin", "Android SDK", "Optimization", "Utility"],
+        type: "Mobile App (React Native)",
+        tags: ["React Native", "TypeScript", "Kotlin", "Android SDK", "Optimization", "Utility"],
         github: "#",
         demo: "#",
         image: "/images/battery-guardian.png"
